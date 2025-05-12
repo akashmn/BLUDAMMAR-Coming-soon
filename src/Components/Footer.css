@@ -1,0 +1,49 @@
+/* Footer.css */
+
+.footer {
+    background-color: #f0ede8;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(11, 41, 73, 0.1);
+    z-index: 1000;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .footer p {
+    margin: 0;
+    color: #0b2949;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  
+  .heart {
+    color: #e25555;
+    display: inline-block;
+    animation: heartbeat 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .footer {
+      padding: 15px 0;
+    }
+    
+    .footer p {
+      font-size: 0.8rem;
+    }
+  }

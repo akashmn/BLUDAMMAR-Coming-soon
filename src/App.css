@@ -1,42 +1,79 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Add these styles to App.css */
+
+/* Loader styles */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0ede8; /* Light beige background similar to the logo background */
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 3s ease;
+}
+
+.loader-content .logo-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid #0b2949;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.loader-content .blu-box {
+  background-color: #0b2949; /* Dark navy blue */
+  color: #f0ede8;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.loader-content .dammar-text {
+  color: #0b2949;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.welcome-text {
+  font-size: 1.5rem;
+  color: #0b2949;
+  margin-top: 10px;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Main content styles */
+.main-content {
   text-align: center;
+  padding: 20px;
+  margin-top: 100px; /* Add space for fixed navbar */
+  animation: fadeIn 1s ease-in;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1, h2 {
+  color: #0b2949;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0ede8;
 }
